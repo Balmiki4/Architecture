@@ -1,0 +1,83 @@
+$date
+	Mon Sep 11 23:29:52 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Testbench $end
+$var wire 4 ! o_shift [3:0] $end
+$var wire 1 " o_not $end
+$var wire 1 # o_nor $end
+$var wire 1 $ o_nand $end
+$var reg 1 % A $end
+$var reg 4 & A_4bit [3:0] $end
+$var reg 1 ' B $end
+$scope module nand_gate $end
+$var wire 1 % A $end
+$var wire 1 ' B $end
+$var wire 1 $ o $end
+$upscope $end
+$scope module nor_gate $end
+$var wire 1 % A $end
+$var wire 1 ' B $end
+$var wire 1 # o $end
+$upscope $end
+$scope module not_gate $end
+$var wire 1 % A $end
+$var wire 1 " o $end
+$upscope $end
+$scope module shift_right $end
+$var wire 4 ( A [3:0] $end
+$var wire 4 ) o [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0xxx )
+bx (
+x'
+bx &
+0%
+1$
+x#
+1"
+b0xxx !
+$end
+#10
+x$
+0#
+0"
+1%
+#20
+1$
+1#
+1"
+0'
+0%
+#30
+0#
+1'
+#40
+1#
+0'
+#50
+0#
+1'
+#60
+b101 !
+b101 )
+b1010 &
+b1010 (
+#70
+b11 !
+b11 )
+b110 &
+b110 (
+#80

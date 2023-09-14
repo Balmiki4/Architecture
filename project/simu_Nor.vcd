@@ -1,0 +1,33 @@
+$date
+	Tue Sep 12 16:31:53 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Test_Nor $end
+$var wire 1 ! o_nor $end
+$var reg 1 " A $end
+$var reg 1 # B $end
+$scope module nor_gate $end
+$var wire 1 " A $end
+$var wire 1 # B $end
+$var wire 1 ! o $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0#
+0"
+1!
+$end
+#10
+0!
+1#
+#20

@@ -1,0 +1,34 @@
+$date
+	Tue Sep 12 16:33:21 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Test_shift $end
+$var wire 4 ! o_shift [3:0] $end
+$var reg 4 " A_4bit [3:0] $end
+$scope module shift_right $end
+$var wire 4 # A [3:0] $end
+$var wire 4 $ o [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b101 $
+b1010 #
+b1010 "
+b101 !
+$end
+#10
+b11 !
+b11 $
+b110 "
+b110 #
+#20

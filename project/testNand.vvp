@@ -1,0 +1,48 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x14a606f30 .scope module, "Test_Nand" "Test_Nand" 2 1;
+ .timescale 0 0;
+v0x14a6175b0_0 .var "A", 0 0;
+v0x14a617650_0 .var "B", 0 0;
+v0x14a617700_0 .net "o_nand", 0 0, L_0x14a617900;  1 drivers
+S_0x14a6070a0 .scope module, "nand_gate" "NandGate" 2 11, 3 1 0, S_0x14a606f30;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "o";
+L_0x14a6177d0 .functor AND 1, v0x14a6175b0_0, v0x14a617650_0, C4<1>, C4<1>;
+L_0x14a617900 .functor NOT 1, L_0x14a6177d0, C4<0>, C4<0>, C4<0>;
+v0x14a6072b0_0 .net "A", 0 0, v0x14a6175b0_0;  1 drivers
+v0x14a617360_0 .net "B", 0 0, v0x14a617650_0;  1 drivers
+v0x14a617400_0 .net *"_ivl_0", 0 0, L_0x14a6177d0;  1 drivers
+v0x14a6174c0_0 .net "o", 0 0, L_0x14a617900;  alias, 1 drivers
+    .scope S_0x14a606f30;
+T_0 ;
+    %vpi_call 2 16 "$dumpfile", "simu_Nand.vcd" {0 0 0};
+    %vpi_call 2 17 "$dumpvars" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x14a6175b0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x14a617650_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x14a6175b0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x14a617650_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 27 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "Test_Nand.v";
+    "NandGate.v";
